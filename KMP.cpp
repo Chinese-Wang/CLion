@@ -45,9 +45,14 @@ int KMP(char* S,char *T){
 
 int main(){
     char S[80];
-    char T[80];
+    /*char T[80];
     cin>>S>>T;
-    int index = KMP(S,T);
-    cout<<index<<endl;
+    int index = KMP(S,T);*/
+    cin>>S;
+    int len = strlen(S);
+    int next[100];
+    GetNext(S,next);
+    for (int i = 0; i < len; ++i)
+        cout<<next[i]<<"\t";
     return 0;
 }
