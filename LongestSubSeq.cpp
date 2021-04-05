@@ -36,18 +36,18 @@ char* BruteForceLongest(const char *str,int strLen,char ans[]) {
                     int tempLen1 = tempLen;   //临时变量，暂存tempLen的值
                     int tempIndex1 = i + l + 1;  //临时变量，表示每次开始寻找回文序列时的下标
                     int tempIndex2 = j-1;  //保存上次回文序列已匹配的结束下标
-                    int k = num;  //临时变量，暂存已匹配的回文字符对数
-                    index1 = tempIndex1;  //index1向后移动
-                    index2 = tempIndex2; //index2向前移动
+                    int tempNum = num;  //临时变量，暂存已匹配的回文字符对数
+                    index1 = tempIndex1;  //子串匹配开始处
+                    index2 = tempIndex2; //子串匹配结束处
                     while (index1 <= index2) {     //查找首尾对应中的回文串
                         if (index1 == index2) {   //如果要查找回文串只剩一个字符
-                            temp[k++] = str[index1];  //将其放入已识别数组中
+                            temp[tempNum++] = str[index1];  //将其放入已识别数组中
                             tempLen1 += 1; //数组长度加一
                             break;
                         }
                         while (str[index1] != str[index2] && index2 > index1) index2--;  //从尾部开始找与开始出相同的元素
                         if (str[index1] == str[index2] && index1 != index2) {   //找到值相同但下标不同的元素
-                            temp[k++] = str[index1];    //将元素放到数组中
+                            temp[tempNum++] = str[index1];    //将元素放到数组中
                             tempLen1 += 2;    //长度加二
                             index2--;  //尾部向前移动
                             tempIndex2 = index2;
@@ -57,7 +57,7 @@ char* BruteForceLongest(const char *str,int strLen,char ans[]) {
                     }
                     if (tempLen1 > ansLen) {   //如果新找到的回文序列长度大于之前的长度
                         ansLen = tempLen1;
-                        for (int copyIndex = 0; copyIndex < k; ++copyIndex) { //将元素复制到结果数组
+                        for (int copyIndex = 0; copyIndex < tempNum; ++copyIndex) { //将元素复制到结果数组
                             ans[copyIndex] = temp[copyIndex];
                             ans[tempLen1 - copyIndex - 1] = temp[copyIndex];
                         }
@@ -133,7 +133,7 @@ void DynProLongest(const char *str,int strLen,char ans[]){
  * 打开文件，返回文件指针
  * @return FILE*
  */
-FILE* fileRead()
+FILE* fileOpen()
 {
     char fileName[20];   //存放输入的文件名
     FILE *fp;    //文件指针
@@ -170,7 +170,7 @@ int main()
     char dpl[MAXSIZE];  //动态规划法搜索的结果
     char ch = ' ';  //退出读取文件的标志
 
-    FILE *fp = fileRead();   //打开文件
+    FILE *fp = fileOpen();   //打开文件
     if(fp == nullptr){      //打开文件失败
         printf("错误,文件打不开,请检查文件名\n");
     }

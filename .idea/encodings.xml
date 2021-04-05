@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/Exercises/3.2.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Exercises/4.10.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Exercises/4.14.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Exercises/4.5.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Exercises/4.6.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Exercises/6.2.1.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Exercises/6.8.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Exercises/7.2.3.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Exercises/8.1.1.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/LongestSubSeq.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/MaxLenOrder.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/PAT/1008.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/banker.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/compile/syntax-parser1.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/compile/word-parser.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/miniCreateTreePrim.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/miniTreeCreateKru.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/te.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test.c" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

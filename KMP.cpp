@@ -4,9 +4,10 @@
 
 #include <iostream>
 #include <cstring>
+
 using namespace std;
 
-void GetNext(char* T,int *next){
+void GetNext(const char* T,int *next){
     int j = 0,k = -1;
     next[0] = -1;
     while (T[j] != '\0'){
@@ -22,7 +23,7 @@ void GetNext(char* T,int *next){
     }
 }
 
-int KMP(char* S,char *T){
+int KMP(const char* S,char *T){
     int j = 0,i = 0;
     int next[80];
     GetNext(T,next);
